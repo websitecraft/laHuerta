@@ -2,54 +2,235 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Menú</title>
+  <title>Menú - La Huerta</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-<nav>
-  <div class="logo">La Huerta</div>
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="menu.html">Menú</a></li>
-    <li><a href="about.html">Nosotros</a></li>
-    <li><a href="contact.html">Contacto</a></li>
-  </ul>
-</nav>
+<nav class="navbar navbar-dark bg-dark fixed-top" style="height: 94px; padding: 15px;">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">La Huerta</a>
 
-<div class="container">
-  <h2>Menú</h2>
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" />
-      <h3>Hamburguesa</h3>
-      <p>$12</p>
-    </div>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">La Huerta</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" />
-      <h3>Pasta artesanal</h3>
-      <p>$14</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" />
-      <h3>Ensalada fresca</h3>
-      <p>$9</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" />
-      <h3>Café</h3>
-      <p>$3</p>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
     </div>
   </div>
+</nav>
+
+<!-- Espacio para compensar navbar fixed -->
+<div style="margin-top:120px;"></div>
+
+<div class="container">
+
+<!-- BEBIDAS -->
+<section class="mb-5">
+  <h2 class="mb-4">Bebidas</h2>
+  <div class="row g-4 justify-content-start">
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" 
+             class="card-img-top" 
+             alt="Café orgánico">
+        <div class="card-body">
+          <h5 class="card-title">Café orgánico</h5>
+          <p class="card-text">
+            Café arábica de cultivo sostenible, con aroma intenso y sabor equilibrado. 
+            Perfecto para comenzar el día con energía natural.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735" 
+             class="card-img-top" 
+             alt="Limonada natural">
+        <div class="card-body">
+          <h5 class="card-title">Limonada natural</h5>
+          <p class="card-text">
+            Refrescante bebida preparada con limón fresco y agua mineral. 
+            Ideal para hidratarse con un toque cítrico y revitalizante.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ESPECIALIDADES -->
+<section class="mb-5">
+  <h2 class="mb-4">Especialidades</h2>
+  <div class="row g-4 justify-content-start">
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" 
+             class="card-img-top" 
+             alt="Hamburguesa vegetariana">
+        <div class="card-body">
+          <h5 class="card-title">Hamburguesa vegetariana</h5>
+          <p class="card-text">
+            Deliciosa combinación de pan integral y medallón de lentejas, 
+            acompañada de vegetales frescos y salsa casera. 
+            Sabor auténtico y saludable en cada bocado.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DESAYUNOS -->
+<section class="mb-5">
+  <h2 class="mb-4">Desayunos</h2>
+  <div class="row g-4 justify-content-start">
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" 
+             class="card-img-top" 
+             alt="Tostadas integrales">
+        <div class="card-body">
+          <h5 class="card-title">Tostadas integrales</h5>
+          <p class="card-text">
+            Pan integral crujiente acompañado de aguacate fresco, tomate y semillas.
+            Ligero, nutritivo y lleno de sabor natural.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" 
+             class="card-img-top" 
+             alt="Bowl de frutas">
+        <div class="card-body">
+          <h5 class="card-title">Bowl de frutas</h5>
+          <p class="card-text">
+            Selección de frutas frescas de temporada con granola artesanal
+            y miel orgánica. Energía natural para tu mañana.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ENSALADAS -->
+<section class="mb-5">
+  <h2 class="mb-4">Ensaladas</h2>
+  <div class="row g-4 justify-content-start">
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1" 
+             class="card-img-top" 
+             alt="Ensalada mediterránea">
+        <div class="card-body">
+          <h5 class="card-title">Ensalada mediterránea</h5>
+          <p class="card-text">
+            Mezcla de hojas verdes, aceitunas, tomate cherry y queso fresco,
+            aderezada con aceite de oliva extra virgen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1512621776951-6d5f0a6a4f83" 
+             class="card-img-top" 
+             alt="Ensalada proteica">
+        <div class="card-body">
+          <h5 class="card-title">Ensalada proteica</h5>
+          <p class="card-text">
+            Quinoa, garbanzos, espinaca fresca y vegetales asados.
+            Una opción equilibrada y llena de nutrientes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- POSTRES -->
+<section class="mb-5">
+  <h2 class="mb-4">Postres</h2>
+  <div class="row g-4 justify-content-start">
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e" 
+             class="card-img-top" 
+             alt="Tarta de zanahoria">
+        <div class="card-body">
+          <h5 class="card-title">Tarta de zanahoria</h5>
+          <p class="card-text">
+            Bizcocho casero de zanahoria con especias naturales
+            y cobertura suave de queso crema.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1505253213348-cd54c1f0d6d0" 
+             class="card-img-top" 
+             alt="Brownie artesanal">
+        <div class="card-body">
+          <h5 class="card-title">Brownie artesanal</h5>
+          <p class="card-text">
+            Brownie de chocolate intenso elaborado con cacao puro
+            y nueces tostadas. Textura húmeda y sabor profundo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 </div>
 
-<footer>
+<footer class="text-center py-4 bg-dark text-white">
   © 2026 La Huerta
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
