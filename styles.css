@@ -51,11 +51,12 @@ body {
   }
 }
 
+
+
 /* SECCIONES GENERALES */
 .about-section,
 .contact-section,
 .menu-section {
-  padding-top: 120px;
   padding-bottom: 80px;
 }
 
@@ -71,12 +72,78 @@ body {
   margin-bottom: 30px;
 }
 
+
+
+
+
+
+
+
 /* MAPA */
 .map-section iframe {
   width: 100%;
-  height: 400px;
+  height: 500px;
   border: 0;
 }
+
+/* Contacto 2 columnas */
+.contact-section h2,
+.contact-section h3 {
+  color: #222;
+  font-weight: 600;
+}
+
+.contact-section p {
+  font-size: 16px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.contact-section i {
+  margin-right: 8px;
+  color: #222;
+}
+
+/* Formulario */
+.contact-form {
+  max-width: 500px;
+}
+
+.contact-form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.contact-form .form-control:focus {
+  border-color: #000;
+  box-shadow: none;
+}
+
+.contact-form button.btn-dark {
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.contact-form button.btn-dark:hover {
+  background-color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contact-section .text-md-start {
+    text-align: center !important;
+  }
+}
+
 
 /* GRID */
 .grid {
@@ -85,82 +152,147 @@ body {
   gap: 20px;
 }
 
-/* CARDS */
-.card {
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.card img,
-.card-img-top {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.card-title {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.card-text {
-  font-size: 14px;
-  color: #666;
-}
-
 /* SECCIONES DE MENÚ */
-.menu-category {
-  margin-bottom: 80px;
-}
 
-.menu-category h2 {
-  font-weight: 500;
-  margin-bottom: 40px;
+/* Categorías */
+.category-title {
+  font-weight: 600;
+  font-size: 2rem;
   text-align: center;
+  margin-bottom: 2rem;
   position: relative;
 }
 
-.menu-category h2::after {
+.category-title::after {
   content: "";
-  width: 60px;
-  height: 2px;
-  background: #2e7d32;
   display: block;
-  margin: 15px auto 0;
+  width: 60px;
+  height: 3px;
+  background-color: #2e7d32;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
+
+/* Tarjetas del menú */
+.menu-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Imagen */
+.card-img-wrapper {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  height: 220px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.card-price {
+  font-weight: 700;
+  color: #2e7d32;
+  font-size: 1.1rem;
+}
+
+/* Espaciado entre secciones */
+.menu-category {
+  margin-bottom: 5rem;
+}
+
+/* Responsive refinado */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  .category-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-price {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
 
 /* FOOTER MINIMAL */
+/* Footer elegante y minimalista */
+/* Footer minimalista en blanco y negro */
 .footer {
-  padding: 30px 0;
+  padding: 40px 20px;
   font-size: 14px;
-  color: #777;
-  border-top: 1px solid #eee;
+  color: #222;           /* texto oscuro */
+  background-color: #fff; /* fondo blanco */
+  border-top: 1px solid #ccc; /* línea sutil */
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* BOTONES (minimal y hover) */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #fff;
-  color: #fff;
+.footer a {
+  color: #222;            /* íconos en negro */
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
 
-.btn:hover {
-  background-color: #2e7d32;
-  color: #fff;
+.footer a:hover {
+  color: #000;            /* hover más oscuro */
+}
+
+/* Iconos de redes */
+.footer .social-icons {
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer .social-icons a {
+  font-size: 18px;
 }
