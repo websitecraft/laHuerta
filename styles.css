@@ -20,43 +20,10 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* HERO */
-.hero {
-  height: 80vh;
-  background: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  padding: 20px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-top: 15px;
-}
-
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-}
-
-
-
 /* SECCIONES GENERALES */
 .about-section,
-.contact-section,
 .menu-section {
+  margin-top: 120px;
   padding-bottom: 80px;
 }
 
@@ -151,114 +118,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
-
-/* SECCIONES DE MENÚ */
-
-/* Categorías */
-.category-title {
-  font-weight: 600;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.category-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #2e7d32;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-/* Tarjetas del menú */
-.menu-card {
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.menu-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-}
-
-/* Imagen */
-.card-img-wrapper {
-  overflow: hidden;
-  border-radius: 12px 12px 0 0;
-  height: 220px;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.menu-card:hover .card-img-top {
-  transform: scale(1.05);
-}
-
-/* Contenido de la tarjeta */
-.card-body {
-  padding: 1.5rem;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.card-text {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.card-price {
-  font-weight: 700;
-  color: #2e7d32;
-  font-size: 1.1rem;
-}
-
-/* Espaciado entre secciones */
-.menu-category {
-  margin-bottom: 5rem;
-}
-
-/* Responsive refinado */
-@media (max-width: 768px) {
-  .card-body {
-    padding: 1rem;
-  }
-
-  .category-title {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .card-title {
-    font-size: 1.1rem;
-  }
-
-  .card-price {
-    font-size: 1rem;
-  }
-}
-
-
-
-
-
-
 
 
 /* FOOTER MINIMAL */

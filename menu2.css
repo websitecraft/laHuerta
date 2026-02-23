@@ -1,0 +1,134 @@
+/* ===== GENERAL ===== */
+
+body {
+  background: #faf8f4;
+  font-family: 'Montserrat', sans-serif;
+  color: #2b2b2b;
+}
+
+
+/* ===== SECCIÓN ===== */
+
+
+/* ===== TÍTULO MÁS FINO ===== */
+
+.menu-title-bistro {
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  letter-spacing: 4px;
+  font-family: 'Playfair Display', serif;
+  color: #3e3e3e;
+}
+
+
+/* ===== LISTA ===== */
+
+.menu-bistro-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 3rem; /* fila / columna */
+}
+@media (max-width: 900px) {
+  .menu-bistro-list {
+    grid-template-columns: 1fr;
+  }
+}
+.menu-bistro-item {
+  break-inside: avoid;
+}
+/* ===== ITEM (sin card, más limpio) ===== */
+
+.menu-bistro-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e2dc;
+}
+
+
+/* ===== IMAGEN CIRCULAR ===== */
+
+.bistro-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+/* ===== CONTENIDO ===== */
+
+.bistro-content {
+  flex: 1;
+}
+
+
+/* nombre + precio + puntos */
+
+.bistro-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.bistro-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+
+/* línea punteada automática */
+
+.dots {
+  flex: 1;
+  border-bottom: 2px dotted #cfcac3;
+  transform: translateY(-4px);
+}
+
+
+/* precio */
+
+.price {
+  font-weight: 700;
+  color: #8d6e63;
+  white-space: nowrap;
+}
+
+
+/* descripción */
+
+.bistro-content p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+/* ===== HOVER SUAVE ===== */
+
+.menu-bistro-item:hover {
+  transform: translateX(6px);
+  transition: 0.2s ease;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+  .menu-bistro-item {
+    gap: 1rem;
+  }
+
+  .bistro-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .menu-title-bistro {
+    font-size: 2.2rem;
+  }
+}

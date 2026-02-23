@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <a class="nav-link" href="menu.html">Menú</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="menu2.html">Menú 2</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="about.html">Nosotros</a>
           </li>
           <li class="nav-item">

@@ -1,0 +1,104 @@
+/* Estilos para hero */
+.hero {
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1498837167922-ddd27525d352") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logo estilo script y dorado */
+.hero .logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  letter-spacing: 3px;
+  color: #d4af37; /* dorado */
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+/* Título grande y mayúsculas */
+.hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+/* Párrafo descriptivo */
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  color: #ddd;
+  line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* Contenedor del botón */
+.scroll-icon {
+  /* Para centrar el botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botón elegante */
+.scroll-icon .btn {
+  font-size: 16px;
+  padding: 12px 30px;
+  border: 2px solid #d4af37;
+  border-radius: 30px;
+  background: transparent;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  user-select: none;
+}
+
+.scroll-icon .btn:hover,
+.scroll-icon .btn:focus {
+  background: #d4af37;
+  color: #111;
+  box-shadow: 0 8px 20px rgba(212,175,55,0.5);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 44px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .hero .logo {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  .hero .logo {
+    font-size: 28px;
+  }
+}
