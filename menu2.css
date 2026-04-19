@@ -1,4 +1,7 @@
 /* ===== GENERAL ===== */
+html {
+  scroll-behavior: smooth;
+} 
 
 body {
   background: #faf8f4;
@@ -22,6 +25,16 @@ body {
   color: #3e3e3e;
 }
 
+.menu-title-bistro-description {
+font-size: 0.8rem;
+text-align: center;
+font-weight: 700;
+margin-bottom: 3rem;
+letter-spacing: 4px;
+font-family: 'Playfair Display', serif;
+color: #3e3e3e;
+margin-top: -3rem;
+}
 
 /* ===== LISTA ===== */
 
@@ -52,8 +65,8 @@ body {
 /* ===== IMAGEN CIRCULAR ===== */
 
 .bistro-img {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -131,4 +144,42 @@ body {
   .menu-title-bistro {
     font-size: 2.2rem;
   }
+}
+
+
+
+.menu-nav {
+  position: sticky;
+  top: 79px;
+  z-index: 1;
+
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+
+  background: white;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  max-width: 100%;
+}
+
+.menu-nav-link {
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  background: #f3f3f3;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-nav-link:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+.menu-category-bistro {
+  margin-top: 50px;
 }
