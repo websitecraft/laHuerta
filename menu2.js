@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${items.map(item => `
           <article class="menu-bistro-item">
 
-            <img src="${item.image}" alt="${item.name}" class="bistro-img">
+            <img src="${item.image}" alt="${item.name}" class="bistro-img bistro-img clickable-img">
 
             <div class="bistro-content">
 
@@ -121,5 +121,31 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+});
+
+
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("imageModalImg");
+const closeBtn = document.querySelector(".image-modal-close");
+
+// abrir imagen
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("clickable-img")) {
+    modal.style.display = "block";
+    modalImg.src = e.target.src;
+  }
+});
+
+// cerrar con X
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// cerrar haciendo click fuera
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
 });
 });
